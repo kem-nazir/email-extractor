@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Group Email Extractor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-zinc-950 text-zinc-100 w-[400px] h-[520px] overflow-hidden">
+  <div class="flex flex-col h-full p-6">
+
+    <div class="flex items-center gap-3 mb-6">
+      <span class="text-3xl">📧</span>
+      <h1 class="text-2xl font-bold text-emerald-400">Group Extractor</h1>
+    </div>
+
+    <div id="status" class="text-center text-sm text-zinc-400 mb-6 min-h-[28px]"></div>
+
+    <button id="extractBtn" 
+            class="w-full bg-emerald-600 hover:bg-emerald-700 py-4 rounded-2xl font-semibold text-lg mb-8 transition">
+      🚀 Lancer l'extraction
+    </button>
+
+    <div class="grid grid-cols-3 gap-3 mb-8">
+      <button id="exportCSV" class="bg-zinc-800 hover:bg-zinc-700 py-3 rounded-xl font-medium">CSV</button>
+      <button id="exportExcel" class="bg-zinc-800 hover:bg-zinc-700 py-3 rounded-xl font-medium">Excel</button>
+      <button id="copyClipboard" class="bg-zinc-800 hover:bg-zinc-700 py-3 rounded-xl font-medium">📋 Copier</button>
+    </div>
+
+    <!-- Résumé propre (jamais trop grand) -->
+    <div id="results" class="hidden bg-zinc-900 border border-zinc-700 rounded-2xl p-5 text-sm">
+      <div class="text-emerald-400 font-semibold mb-3">✅ Extraction terminée</div>
+      <div id="summary" class="space-y-2 text-zinc-300"></div>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

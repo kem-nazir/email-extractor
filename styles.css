@@ -1,0 +1,23 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+button:active {
+  transform: scale(0.97);
+}
+
+#dataPreview {
+  scrollbar-width: thin;
+  scrollbar-color: #52525b #27272a;
+}
+
+#dataPreview::-webkit-scrollbar {
+  width: 6px;
+}
+#dataPreview::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 20px;
+}
